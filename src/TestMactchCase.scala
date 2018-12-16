@@ -1,10 +1,25 @@
 object TestMactchCase  extends  App {
-  import scala.util.Random
-  val x: Int = Random.nextInt(10)
+  val x: Int = 10;
  var result = x match {
-    case 0 => "zero"
+   case 11 => "zero11"
+   case 10 => "one"
+   case 21 => "two"
+   case _ => "many"
+ }
+  println(result)
+
+
+  def matchTest(x: Int): String = x match {
     case 1 => "one"
     case 2 => "two"
     case _ => "many"
   }
+
+  println(matchTest(3)) // many
+  println(matchTest(1)) // one
+
+
+
+
+
 }
