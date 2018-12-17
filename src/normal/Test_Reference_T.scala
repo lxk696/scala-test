@@ -1,4 +1,4 @@
-class Reference[T] {
+class Test_Reference_T[T] {
   private var contents: T = _
 
   def set(value: T) {
@@ -8,9 +8,9 @@ class Reference[T] {
   def get: T = contents
 }
 
-object IntegerReference {
+object Test_Reference_T {
   def main(args: Array[String]) {
-    val cell = new Reference[Int]
+    val cell = new Test_Reference_T[Int]
     cell.set(13)
     println("Reference contains the half of " + (cell.get * 2))
   }
