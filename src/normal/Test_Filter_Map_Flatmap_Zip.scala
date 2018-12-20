@@ -1,4 +1,4 @@
-object ToMap extends App {
+object Test_Filter_Map_Flatmap_Zip extends App {
   var x = Set("a", "b", "c")
     .zipWithIndex //(a,0), (b,1), (c,2)
     .map { case (v, i) => (v, i + 1) } //increment each of those indexes
