@@ -24,6 +24,24 @@ object TestMethod_Currying extends App {
   //  最后，打印出来的结果就是3。
   //
   //  下面是一个完整实例：
+        //原本的方法
+        def m(x: Int, y: Int) = x + y
+
+
+        //第一种柯里化
+        def first(x: Int) = (y: Int) => x + y
+
+        val second = first(1)
+        val result: Int = second(2)
+        println(result)
+
+        //第二种柯里化
+        def curriedSum(x: Int)(y: Int) = x + y
+
+        val sum: Int = curriedSum(1)(2)
+        println(sum)
+
+
 
   object Test {
     def main(args: Array[String]) {
