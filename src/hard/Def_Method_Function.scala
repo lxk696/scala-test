@@ -1,8 +1,9 @@
 
 object Def_Method_Function extends App {
 
-  // TODO 方法与函数的区别 https://blog.csdn.net/love666666shen/article/details/79181018
-
+  // TODO 方法与函数的区别 https://blog.csdn.net/love666666shen/article/details/79181018   100++
+//TODO 方法变函数：  在方法名之后，加上一个空格，然后再加上一个下划线的形式，变成函数，赋值给一个变量，最后通过该变量名，带上参数列表调用该函数
+//
   //  由于Scala是函数式编程语言，而在函数式编程语言中，函数是“头等公民”，它可以像任何其他数据类型一样被传递和操作 ，
   //  因此在平常的使用时也常将方法也泛称为函数，如第2节所说的函数许多是不合适的。
   //  在Scala中函数和方法有什么区别，平时使用中也做太多的关注，这里也趁着这篇文章了解、总结一下。

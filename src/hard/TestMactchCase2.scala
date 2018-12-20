@@ -1,10 +1,11 @@
 object TestMactchCase2 extends App {
-//  密封类（Sealed classes）
-//  Traits 和 classes 都可以被标记为 sealed，这也就意味着所有的子类必须要声明在相同的文件中。这样可以保证所有的子类都是已知的。
 
-//  这种定义对于模式来说非常有用，因为我们不需要捕获全部的情况。即不必考虑除声明类之外的其它类。
-//  注意
-//  Scala 的模式匹配语句对于通过 case类表示的代数表达式的匹配是最有用的。通过使用提取器对象（extractor objects）中的 unapply 方法，Scala 也允许独立于 case 类（case classes）的模式定义。
+  //  密封类（Sealed classes）
+  //  Traits 和 classes 都可以被标记为 sealed，这也就意味着所有的子类必须要声明在相同的文件中。这样可以保证所有的子类都是已知的。
+
+  //  这种定义对于模式来说非常有用，因为我们不需要捕获全部的情况。即不必考虑除声明类之外的其它类。
+  //  注意
+  //  Scala 的模式匹配语句对于通过 case类表示的代数表达式的匹配是最有用的。通过使用提取器对象（extractor objects）中的 unapply 方法，Scala 也允许独立于 case 类（case classes）的模式定义。
   sealed abstract class Notification
 
   case class Email(sender: String, title: String, body: String) extends Notification
@@ -18,8 +19,8 @@ object TestMactchCase2 extends App {
       //如果notification 是Email 类型。则把如果notification的 参数对应传进来 email11111-》 sender
       case Email(email11111, title1111111, _) =>
         s"You got an email from $email11111 with title: $title1111111"
-//      case SMS(number, message) =>
-//        s"You got an SMS from $number! Message: $message"
+      //      case SMS(number, message) =>
+      //        s"You got an SMS from $number! Message: $message"
       case s: SMS =>
         s"You got an SMS from " + s.caller + "!!!!! Message: " + s.message
       case VoiceRecording(name, link) =>
@@ -56,7 +57,7 @@ object TestMactchCase2 extends App {
 
   val importantPeopleInfo = Seq("867-5309", "jenny111@gmail.com")
   // importantPeopleInfo: Seq[String]
-  var showImportantNotification2 = showImportantNotification(_, importantPeopleInfo)
+  var showImportantNotification2 = showImportantNotification(_:Notification, importantPeopleInfo)
   println(showImportantNotification2(someImportantSms))
   println(showImportantNotification2(someImportantVoiceRecording))
   println(showImportantNotification2(importantEmail))

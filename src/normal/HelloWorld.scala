@@ -1,3 +1,5 @@
+import normal.TestScalaCallJava
+
 import scala.util.Random
 import scala.util.control.Breaks._
 
@@ -50,6 +52,6 @@ object HelloWorld extends App {
                Random.nextInt(100) ;}
      )
   println("----4---------------------")
-  TestScalaCallJava.main(null);
-  new TestScalaCallJava().say("this is scala!!");
+ TestScalaCallJava.main(null);
+ new TestScalaCallJava().say("this is scala!!");
 }

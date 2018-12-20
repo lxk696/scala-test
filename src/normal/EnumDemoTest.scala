@@ -9,7 +9,7 @@ import EnumerationDemo._
   * 枚举类型也可以通过for循环将所有元素输出，同时可以通过Enumeration（Int）和Enumeration.withName（""）来进行 定位操作
   * */
 class EnumDemoTest {
-  def transportation(color:Enumeration): Unit ={
+  def transportation(color:Enumeration){
     if (color == red)
       "Stop"
     else if (color == green)
