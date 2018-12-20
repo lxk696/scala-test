@@ -1,3 +1,4 @@
+package hard
 trait Ord {
   def < (that: Any): Boolean
   def <=(that: Any): Boolean =  (this < that) || (this == that)

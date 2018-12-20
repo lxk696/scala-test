@@ -1,3 +1,5 @@
+package normal;
+
 /**
  * @author 刘雄康
  * @version v1.0
